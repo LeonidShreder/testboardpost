@@ -4,11 +4,6 @@ from django.db import models
 from django.urls import reverse
 
 
-class MyUser(User):
-    identifier = models.CharField(max_length=40, unique=True)
-    USERNAME_FIELD = 'identifier'
-
-
 class Post(models.Model):
     author_name = models.ForeignKey(settings.AUTH_USER_MODEL, on_delete=models.CASCADE)
     title = models.CharField(max_length=30, unique=True)
