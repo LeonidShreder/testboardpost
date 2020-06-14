@@ -1,0 +1,30 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+    <h1>Posts</h1>
+    <table border="1">
+        <thead>
+        <tr>
+            <th>Name</th>
+            <th>Pages</th>
+            <th>View</th>
+            <th>Edit</th>
+            <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody>
+        {% for post in object_list %}
+            <tr>
+                <td>{{ post.name }}</td>
+                <td>{{ post.upVotes }}</td>
+                <td><a href="{% url "post_view" post %}">view</a></td>
+                <td><a href="{% url "post_edit" post %}">edit</a></td>
+                <td><a href="{% url "post_delete" post %}">delete</a></td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{% url "post_new" %}">New</a>
+{% endblock %}
