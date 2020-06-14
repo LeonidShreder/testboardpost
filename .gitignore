@@ -18,3 +18,16 @@ build/
 tests/report/
 venv/
 django/
+.gitignore
+.idea/.gitignore
+.idea/dataSources.xml
+.idea/dataSources/
+.idea/inspectionProfiles/
+.idea/misc.xml
+.idea/modules.xml
+.idea/testboardapi.iml
+.idea/vcs.xml
+db.sqlite3
+
+
+
